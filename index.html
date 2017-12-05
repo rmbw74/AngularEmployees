@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Angular-Employees</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body ng-app="EmployeeApp">
+
+    <nav ng-include="'app/navigation/partials/navigation.html'"></nav>
+    <div ng-view></div>
+    <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDAVblbKPmcRkTR-g9i_1egUi7r-g3Ddc4",
+            authDomain: "employees-123d3.firebaseapp.com",
+            databaseURL: "https://employees-123d3.firebaseio.com",
+            projectId: "employees-123d3",
+            storageBucket: "employees-123d3.appspot.com",
+            messagingSenderId: "491082459293"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="./lib/node_modules/angular/angular.min.js"></script>
+    <script src="./lib/node_modules/firebase/firebase.js"></script>
+    <script src="./lib/node_modules/angular-route/angular-route.min.js"></script>
+    <script src="./app/app.js"></script>
+    <script src="./app/app.config.js"></script>
+
+    <script src="./app/auth/factories/AuthFactory.js"></script>
+    <script src="./app/auth/controllers/AuthCtrl.js"></script>
+    <script src="./app/navigation/controllers/NavCtrl.js"></script>
+    <script src="./app/employees/factories/EmployeeFactory.js"></script>
+    <script src="./app/employees/controllers/EmployeeListCtrl.js"></script>
+    <script src="./app/employees/controllers/EmployeeCreateCtrl.js"></script>
+    <script src="./app/employees/controllers/EmployeeDetailCtrl.js"></script>
+
+</body>
+
+</html>
