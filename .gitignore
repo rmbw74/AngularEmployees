@@ -3,3 +3,4 @@ index-old.html
 lib/node_modules
 node_modules
 employees.json
+lib/package-lock.json
